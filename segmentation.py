@@ -1,5 +1,8 @@
 import torch
-import torchvision.transforms.v2 as T
+try:
+    import torchvision.transforms.v2 as T
+except ImportError:
+    import torchvision.transforms as T
 import torch.nn.functional as F
 from .utils import expand_mask
 

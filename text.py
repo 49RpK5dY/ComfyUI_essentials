@@ -1,7 +1,10 @@
 import os
 import torch
 from nodes import MAX_RESOLUTION
-import torchvision.transforms.v2 as T
+try:
+    import torchvision.transforms.v2 as T
+except ImportError:
+    import torchvision.transforms as T
 
 FONTS_DIR = os.path.join(os.path.dirname(os.path.realpath(__file__)), "fonts")
 class DrawText:

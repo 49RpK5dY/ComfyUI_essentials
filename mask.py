@@ -1,6 +1,9 @@
 from nodes import SaveImage
 import torch
-import torchvision.transforms.v2 as T
+try:
+    import torchvision.transforms.v2 as T
+except ImportError:
+    import torchvision.transforms as T
 import random
 import folder_paths
 import comfy.utils

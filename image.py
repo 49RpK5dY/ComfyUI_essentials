@@ -4,7 +4,10 @@ import comfy.utils
 
 import torch
 import torch.nn.functional as F
-import torchvision.transforms.v2 as T
+try:
+    import torchvision.transforms.v2 as T
+except ImportError:
+    import torchvision.transforms as T
 
 import warnings
 warnings.filterwarnings('ignore', module="torchvision")
